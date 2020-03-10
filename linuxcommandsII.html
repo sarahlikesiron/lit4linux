@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lessons || Linux Commands II</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/styles1.css">
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/flashcards.js"></script>
+    </head>
+    
+    <body>
+            <i class="fa fa-bars" id="hamburger" onclick="displayMenu()"></i>
+            <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+                </div>
+                <div id='nav'>
+                    <div class="menu-option">
+                        <button class="menu-button">Home</button>
+                            <div class="list-items">
+                                <a href="index.html">About</a>
+                            </div>
+                    </div>
+                            
+                    <div class="menu-option">
+                        <button class="menu-button">Getting Started</button>
+                            <div class="list-items">
+                                <a href="gettingStarted.html">Starting with Linux</a>
+                            </div>
+                        </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button active">Lessons</button>
+                           <div class="list-items">
+                               <a href="linuxcommandsI.html">Linux Commands I</a>
+                               <a href="linuxcommandsII.html" class="active">Linux Commands II</a>
+                               <a href="playingwithtext.html">Playing with Text</a>
+                               <a href="permissions.html">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button">Flashcards</button>
+                           <div class="list-items">
+                               <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                               <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                               <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                               <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                               <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+               </div>
+        <div class="leftnav">
+            <h3>CHOOSE A LESSON</h3>
+                <ul>
+                    <li><a href="linuxcommandsI.html">LINUX COMMANDS I</a></li>
+                    <li><a href="linuxcommandsII.html">LINUX COMMANDS II</a></li>
+                    <li><a href="playingwithtext.html">PLAYING WITH TEXT</a></li>
+                    <li><a href="permissions.html">USERS, GROUPS, &amp; PERMISSIONS</a></li>
+                </ul>
+        </div>
+        
+        <div class="LessonsContent">
+            <div class="header">
+                <h1> Linux Commands II </h1>
+            </div>
+    
+            <div class="textBox">
+                <h3>Find</h3>
+                <img src="assets/images/find.png" alt="Find Command" class="lesson-img">
+                <p class="text-commands1">
+                    The find command allows you to search for files in the given directory. 
+                    This command is performed hierarchically meaning it starts at the parent directory and moves down to sub-directories within the parent. 
+                </p>
+                <p class="text-commands1"> 
+                    A scenario this command might be used is when you want to find all files with the .txt file extension. 
+                    The command would be “find *.txt”. Note the * in the command is a wildcard meaning that in the space where it is - any text may be there. 
+                    So, it would find any file regardless of name with the .txt file extension.
+                </p>
+            </div>
+            
+            <div class="textBox">
+                <h3>Yum</h3>
+                <img src="assets/images/yum.png" alt="Yum Command" class="lesson-img">
+                <p class="text-commands1">
+                    Yum is command used for allowing users to easily install, update, or remove software packages on a machine.
+                </p>
+                <p class="text-commands1">
+                    Installing a package with yum: To install an application or software use the command “yum install” followed by the name of the software you wish to install. 
+                    For example, say you want to download firefox on your machine. Enter the command “yum install firefox”. 
+                    Watch it install and enter “Y” for yes when prompted if it’s okay to download. 
+                    Be patient as it can take some time to install depending on the size of the package. 
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Passwd</h3>
+                <img src="assets/images/passwd.png" alt="Password Command" class="lesson-img">
+                <p class="text-commands1">
+                    The passwd command is a command used in the terminal to change the current password. 
+                    Simply enter the command “passwd” and you will be prompted to enter the current password and then the new password twice similar to how other systems handle changing passwords.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Wget</h3>
+                <img src="assets/images/wget.png" alt="Wget Command" class="lesson-img">
+                <p class="text-commands1">
+                    Wget is a free utility on CentOS that is used to download files from the web.
+                    Enter the command wget followed by the full link for a download of a particular software listed on the link and it will start downloading that software for you. 
+                    For example, say we want to download a jpeg file off a website. Enter the command “wget” followed by the website name with the file you want.
+                </p>
+            </div>
+        
+            <div class="textBox">
+                <h3>Ifconfig</h3>
+                <img src="assets/images/ifconfig.png" alt="Ifconfig Command" class="lesson-img">
+                <p class="text-commands1">
+                    Ifconfig is a network utility in Linux to view networking configurations on the machine. 
+                    Enter the command “ifconfig” and all the network interfaces, ip addresses, MAC addresses, and more will be displayed. 
+                    This command is great for troubleshooting internet connectivity or other networking issues that might occur on your machine.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Top</h3>
+                <img src="assets/images/top.png" alt="Top Command" class="lesson-img">
+                <p class="text-commands1">
+                    Top is a command used to display processes running on the machine. 
+                    It also displays some valuable metrics regarding your machine including CPU and Memory utilization. 
+                    Simply enter the command “top” and examine what is going on with your machine.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Su</h3>
+                <img src="assets/images/su.png" alt="Su Command" class="lesson-img">
+                <p class="text-commands1">
+                    Su is a command that switches users to the root user of the machine. 
+                    The root user is the user or account on a Linux machine that by default has access to all commands and files. 
+                    As you continue your journey learning Linux, you will notice that some commands require the root account to enter it.
+                </p>
+                <p class="text-commands1">
+                    Using the command “su” will prompt you to enter the root password. 
+                    This is the password you set during the installation process of CentOS 7 on your machine. 
+                    After you enter the password you should now be in root mode with access to everything on the machine. 
+                    Note: Be careful! Being on root is a security risk as they can do a lot of damage quickly and have access to everything. 
+                    This is not a mode you want your machine to be in all the time. 
+                </p>
+            </div>
+
+
+        </div>
+
+        <footer>
+            <p class="foot">2019 - Peachagranate</p>
+        </footer>
+
+    </body>
+</html>

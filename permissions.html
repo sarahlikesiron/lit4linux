@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lessons || Users, Groups, &amp; Permissions</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/styles1.css">
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/flashcards.js"></script>
+    </head>
+    
+    <body>
+            <i class="fa fa-bars" id="hamburger" onclick="displayMenu()"></i>
+            <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+                </div>
+                <div id='nav'>
+                    <div class="menu-option">
+                        <button class="menu-button">Home</button>
+                            <div class="list-items">
+                                <a href="index.html">About</a>
+                            </div>
+                    </div>
+                            
+                    <div class="menu-option">
+                        <button class="menu-button">Getting Started</button>
+                            <div class="list-items">
+                                <a href="gettingStarted.html">Starting with Linux</a>
+                            </div>
+                    </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button active">Lessons</button>
+                           <div class="list-items">
+                               <a href="linuxcommandsI.html">Linux Commands I</a>
+                               <a href="linuxcommandsII.html">Linux Commands II</a>
+                               <a href="playingwithtext.html">Playing with Text</a>
+                               <a href="permissions.html" class="active">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button">Flashcards</button>
+                           <div class="list-items">
+                               <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                               <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                               <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                               <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                               <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+               </div>
+
+        <div class="leftnav">
+            <h3>CHOOSE A LESSON</h3>
+                <ul>
+                    <li><a href="linuxcommandsI.html">LINUX COMMANDS I</a></li>
+                    <li><a href="linuxcommandsII.html">LINUX COMMANDS II</a></li>
+                    <li><a href="playingwithtext.html">PLAYING WITH TEXT</a></li>
+                    <li><a href="permissions.html">USERS, GROUPS, &amp; PERMISSIONS</a></li>
+                </ul>
+        </div>
+        
+        <div class="LessonsContent">
+            <div class="header">
+                <h1> User, Group, and File Permissions Management </h1>
+                <p class="text-commands1">
+                    As mentioned in other parts of this site, one of the main focuses of the LinuxOS is security. 
+                    Security plays a large role in operating system to ensure confidentiality, integrity, and reliability of data. 
+                    One aspect of security in LinuxOS is demonstrated through its use of ownership and permissions.
+                </p>
+                <p class="text-commands1">
+                    Every file and directory on a Linux System is assigned 3 types of ownership, with the ability for different permissions for each. 
+                    The three types of owners for files and directories in Linux are a User, Group, and Other.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>User</h3>
+                <p class="text-commands1">
+                    A user is the owner of the file. By default, the person who created a file is the user or owner. 
+                    A group or user group is a collection of multiple users.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Groups</h3>
+                <p class="text-commands1">
+                    Groups have specified users added to a particular group. 
+                    Instead of manually assigning permissions for each Linux user, 
+                    a group can make things easier if you have a lot of people working on a file or directory.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Other</h3>
+                <p class="text-commands1">
+                    Other refers to any other user that has access to a file or directory. 
+                    It essentially means everybody else. When you set permissions for this type of owner you are setting permissions for the rest of the world.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <p class="text-commands1">
+                    Now that we understand the types of ownership for Linux files and directories we can set permissions for each one. 
+                    Permissions dictate what actions can be done to a particular file or directory. 
+                    Like owners, there are 3 types of permissions that can be assigned.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <p class="text-commands1">
+                    <strong>Read: </strong>refers to a permission that allows somebody to open and read or look at a file.
+                </p>
+                <p class="text-commands1">
+                    <strong>Write: </strong>refers to the permission that allows somebody to modify the contents of a file and make changes. 
+                    The write permission on a directory allows somebody to add, remove, and rename files in a stored directory.
+                </p>
+                <p class="text-commands1">
+                    <strong>Execute: </strong>refers to the permission in which you can run a file. 
+                    Say you have a program or a script you have the file for and you want to run the program or script. 
+                    The execute permission allows you to run that file on your system.
+                </p>
+
+                <p class="text-commands1">
+                    Let's see this in action!
+                </p>
+            </div>
+
+            <div class="textBox">
+                <p class="text-commands1">
+                    Try entering the list command we know and love but with -ls after it in our Linux Terminal. 
+                    The full command should look like this “ls -l”. This command lists all the files but the -l adds on the permissions of each file in the list. 
+                    Look at the example below of the file1.txt on our machine.
+                </p>
+                <img src="assets/images/rw.png" alt="Read Write Execute" class="lesson-img">
+                <p class="text-commands1">
+                    On the left hand side we see the file permissions for this particular file. 
+                    The -rw-rw-r— is our permissions for this file and can be viewed in chunks. 
+                    Each chunk separated by a “-” represents a different owner. 
+                    The first chunk always represents the “User”, the second chunk always represents the “Group”, and the third chunk always represents the “Other”.
+                </p>
+                <p class="text-commands1">
+                    Now that we know the corresponding owner for each chunk we can assess what permissions each owner has. 
+                    “r” refers to the permission of reading the file. “w” refers to the permission of writing the file. 
+                    “w” refers to the permission of executing a file. When you see rw together that means that this group has both read and write permissions.
+                </p>
+                <p class="text-commands1">
+                    So, let’s break this example down:
+                    Since the first chunk is rw, that means the User or owner of the file can both read and write
+                    The second chunk is also rw, that means the Group can both read and write the file.
+                    The third chunk is just r, that means the Other or everybody else can only read the file.                         
+                </p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p class="foot">2019 - Peachagranate</p>
+        </footer>
+
+    </body>
+</html>

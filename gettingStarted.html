@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang=en-us>
+
+<!-- Project 1 Peachagranate -->
+<!-- ISTE240 section 2 Team 3-->
+<!-- 
+	-->
+
+<head>
+    <meta charset="UTF-8">
+    <title> Project 1 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles1.css">
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/flashcards.js"></script>
+</head>
+
+<body>
+    <!-- Section to add the nav bar -->
+    <i class="fa fa-bars" id="hamburger" onclick="displayMenu()"></i>
+    <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+    </div>
+    <div id='nav'>
+        <div class="menu-option">
+            <button class="menu-button">Home</button>
+                <div class="list-items">
+                    <a href="index.html">About</a>
+                </div>
+        </div>
+                
+        <div class="menu-option">
+            <button class="menu-button active">Getting Started</button>
+                <div class="list-items">
+                    <a href="gettingStarted.html" class="active">Starting with Linux</a>
+                </div>
+        </div>
+       
+       <div class="menu-option">
+           <button class="menu-button">Lessons</button>
+               <div class="list-items">
+                   <a href="linuxcommandsI.html">Linux Commands I</a>
+                   <a href="linuxcommandsII.html">Linux Commands II</a>
+                   <a href="playingwithtext.html">Playing with Text</a>
+                   <a href="permissions.html">Users, Groups, & Permissions</a>
+               </div>
+       </div>
+       
+       <div class="menu-option">
+           <button class="menu-button">Flashcards</button>
+               <div class="list-items">
+                   <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                   <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                   <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                   <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                   <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+               </div>
+       </div>
+   </div>
+    <div class="pageContent gettingStartedPageContent">
+        <div class="header">
+            <h1> Getting Started! </h1>
+
+            <div class="gettingStarted">
+                <ul class="theList">
+                    <li class="lin"> <a class="x" href="#whatsLinux"> WHAT IS LINUX </a> </li>
+                    <li class="lin"> <a class="x" href="#purpose"> LINUX'S PURPOSE </a> </li>
+                    <li class="lin"> <a class="x" href="#installingCentOs"> INSTALLING CENTOS </a> </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div>
+            <h2 id="whatsLinux"> What is Linux? </h2>
+        </div>
+        <div class="description">
+            <p> Linux OS is comprised of many different components that piece together the one of a kind OS. These several pieces include: </p>
+            <div class="textBox">
+                <h3>Bootloader</h3>
+                <p class="content">
+                    Software that manages the boot up process of your device. This is usually a screen thaat pops up and goes away after your machine finishes booting up.
+                </p>
+            </div>
+            <div class="textBox">
+                <h3>Kernel</h3>
+                <p class="content">
+                    The kernel is a critical piece of the Linux OS. The Kernel is the core of the system and manages aspects of your machine such as CPU, memory, and peripheral devices like mice and keyboards. It is the lowest level of our OS architecture.
+                </p>
+            </div>
+            <div class="textBox">
+                <h3>Daemons</h3>
+                <p class="content">
+                    This component is in charge of controlling different daemons and how they operate. See daemon defenition next.
+                </p>
+            </div>
+            <div class="textBox">
+                <h3>Graphical Server</h3>
+                <p class="content">
+                    This is a subsystem that displays graphics on the monitor of your device.
+                </p>
+            </div>
+            <div class="textBox">
+                <h3>Desktop Enviroment</h3>
+                <p class="content">
+                    The desktop enviroment is the graphical user interface that the user interacts with when using the operating system. This is the look and feel of the software and can be chosen among many different enviroments.
+                </p>
+            </div>
+            <div class="textBox">
+                <h3>Applications</h3>
+                <p class="content">
+                    Like other operating systems, Linux offers applications available for download and installation on your machine.
+                </p>
+            </div>
+        </div>
+        
+    <div class="gettingstarted-image">
+        <img class="purpose" src="assets/images/illus_lessons.png" alt="illus_lessons">
+    </div>
+    
+    <div class="textBox" id="purpose">
+        <h3>Linux's Purpose</h3>
+            <p class="content">
+                Linux is one of the most popular operating systems used for a variety of different reasons. One of the most prevalent reasons for Linux is because of its price. Linux is one of the cheapest options for OS because it is free! Linux costs zero dollars for installation on a machine and can be downloaded and used as much as one desires. In comparison, Linux counterparts including Apple’s MacOS, and Microsoft’s Windows can run up a pretty penny in cost for the software alone. As a result most modern companies will opt for Linux OS on their machines - especially the servers in their organization. 
+            </p>
+            <br/>
+            <p class="content">
+                In addition, Linux is open source. Open source essentially means that anybody has the freedom to run it for any purpose. People are free to study the inner workings of Linux and contribute their own changes to it. Furthermore, people are free to distribute copies of your own modified version of it to others. Linux is a community all about freedom and choice.
+            </p>
+    </div>
+    <div class="textBox" id="installingCentOs">
+        <h3>Installing Centos</h3>
+            <p class="content">
+                CentOS is a type of Linux distribution. A distribution is a type or fork of Linux with different looks and feel. Different distributions are installed for different reasons. If you want your machine to act as a server you might install Ubuntu Server. If you want your machine to act as a personal machine you might install CentOS. The distribution chosen all depends on preference and use case of the user. For beginners we recommend CentOS as its one of the more friendly and intuitive Linux distributions for newer users. Installation process can be found <a href="https://phoenixnap.com/kb/how-to-install-centos-7">here!</a> 
+            </p>
+            <br/>
+    </div>
+    
+<!--        description-->
+</div>
+<!--    page content-->
+    
+
+
+<footer>
+    <p class="foot">2019 - Peachagranate</p>
+</footer>
+
+</body>
+
+</html>

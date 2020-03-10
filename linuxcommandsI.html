@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lessons || Linux Commands I</title>
+        <link rel="stylesheet" href="assets/css/styles1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/flashcards.js"></script>
+    </head>
+    
+    <body>
+            <i class="fa fa-bars" id="hamburger" onclick="displayMenu()"></i>
+            <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+            </div>
+                <div id='nav'>
+                    <div class="menu-option">
+                       <button class="menu-button">Home</button>
+                            <div class="list-items">
+                                <a href="index.html">About</a>
+                            </div>
+                   </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button">Getting Started</button>
+                            <div class="list-items">
+                                <a href="gettingStarted.html">Starting with Linux</a>
+                            </div>
+                   </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button active">Lessons</button>
+                           <div class="list-items">
+                               <a href="linuxcommandsI.html" class="active">Linux Commands I</a>
+                               <a href="linuxcommandsII.html">Linux Commands II</a>
+                               <a href="playingwithtext.html">Playing with Text</a>
+                               <a href="permissions.html">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button">Flashcards</button>
+                           <div class="list-items">
+                               <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                               <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                               <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                               <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                               <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+               </div>
+        <div class="leftnav">
+            <h3>CHOOSE A LESSON</h3>
+                <ul>
+                    <li><a href="linuxcommandsI.html">LINUX COMMANDS I</a></li>
+                    <li><a href="linuxcommandsII.html">LINUX COMMANDS II</a></li>
+                    <li><a href="playingwithtext.html">PLAYING WITH TEXT</a></li>
+                    <li><a href="permissions.html">USERS, GROUPS, &amp; PERMISSIONS</a></li>
+                </ul>
+        </div>
+        
+        <div class="LessonsContent">
+            <div class="header">
+                <h1> Linux Commands I </h1>
+            </div>
+
+            <div class="textBox">
+                <h3>Ls</h3>
+                <img src="assets/images/ls.png" alt="List Command" class="lesson-img">
+                <p class ="text-commands1">
+                    Ls is a command to list things on your machine such as files and directories.
+                    Typing the command “ls” will display the files and folders of the directory you are in. 
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Cd</h3>
+                <img src="assets/images/cd.png" alt="Change Dir Command" class="lesson-img">
+                <p class="text-commands1">
+                    Cd is a command to change the directory. 
+                    You enter “cd” followed by the directory or file path and it will take you inside that directory. 
+                    For example, say you want to change directories to “Desktop” because you want to view the files there. 
+                    You can do the command “cd Desktop” to change your location to the “Desktop” directory. 
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Man</h3>
+                <img src="assets/images/man.png" alt="Manual Command" class="lesson-img">
+                <p class="text-commands1">
+                    Man is the manual command. 
+                    This is used when you want some additional information on a particular command and how it works. 
+                    Say for example I want to learn more about the “ls” command. 
+                    I would enter the command “man ls” and see a manual written explaining “ls”.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Pwd</h3>
+                <img src="assets/images/pwd.png" alt="Print Working Dir Command" class="lesson-img">
+                <p class="text-commands1">
+                    Pwd stands for print working directory. 
+                    It is helpful when you are changing directories a lot and want to know where you are within the directory structure. 
+                    Simply enter the command “pwd” and CentOS will display what directory you are in. 
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Mkdir</h3>
+                <img src="assets/images/mkdir.png" alt="Make Dir Command" class="lesson-img">
+                <p class="text-commands1">
+                    Mkdir is a command to make a directory on your CentOS machine. 
+                    Enter this command followed by the name you wish to name the directory and it will make it. 
+                    Example) “mkdir folder1”. You can also verify it was created using the ls command again to list out your files and directories.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Rmdir</h3>
+                <img src="assets/images/rmdir.png" alt="Remove Dir Command" class="lesson-img">
+                <p class="text-commands1">
+                    Rmdir is short for remove directory. 
+                    Say we want to delete a directory, enter the command “rmdir” followed by the name of the directory. 
+                    For example say we want to delete the folder1 directory we just created. 
+                    We would enter the command “rmdir folder1”. 
+                    Then we can verify it was removed by doing the ls command again and illustrating that folder1 is no longer there.
+                </p>
+            </div>
+
+        <div class="textBox">
+            <h3>Touch</h3>
+            <img src="assets/images/touch.png" alt="Touch Command" class="lesson-img">
+            <p class="text-commands1">
+                Touch is a command used to make new files. 
+                It can be anything from an empty text file to an empty zip file. 
+                Simply enter the command “touch” followed by the name of the file you wish to create. 
+                For example, enter the command “touch file1.txt” to create a text file named file1. 
+                You can also verify it now exists by using the “ls” command.
+            </p>
+        </div>
+
+        <div class="textBox">
+            <h3>Rm</h3>
+            <img src="assets/images/rm.png" alt="Remove Command" class="lesson-img">
+            <p class="text-commands1">
+                Rm is the command to remove files, not directories. 
+                We would use this command if we wanted to delete a file on our machine. 
+                For example, say we want to delete file1.txt we would enter the command “rm file1.txt”. 
+                You can also verify it was deleted by using the “ls” command and seeing that file1.txt no longer exists.
+            </p>
+        </div>
+
+        <div class="textBox">
+            <h3>Mv</h3>
+            <img src="assets/images/mv.png" alt="Move Command" class="lesson-img">
+            <p class="text-commands1">
+                Mv is short for move. Move is a command to move files through the command line. 
+                You can use the command to change the directories of a file. 
+                Example: “mv file1.txt Desktop” moves file1.txt to the Desktop directory. 
+                We can verify it was moved by changing our directory to Desktop using the command “cd Desktop” then listing the contents of Desktop using “ls”. 
+                We should now see the file1.txt.
+            </p>
+        </div>
+
+        </div>
+
+        <footer>
+            <p class="foot">2019 - Peachagranate</p>
+        </footer>
+
+    </body>
+</html>

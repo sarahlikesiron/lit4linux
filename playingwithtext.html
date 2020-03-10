@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lessons || Playing with Text</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/styles1.css">
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/flashcards.js"></script>
+    </head>
+    
+    <body>
+            <i class="fa fa-bars" id="hamburger" onclick="displayMenu()"></i>
+            <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+                </div>
+                <div id='nav'>
+                    <div class="menu-option">
+                        <button class="menu-button">Home</button>
+                            <div class="list-items">
+                                <a href="index.html">About</a>
+                            </div>
+                    </div>
+                            
+                    <div class="menu-option">
+                        <button class="menu-button">Getting Started</button>
+                            <div class="list-items">
+                                <a href="gettingStarted.html">Starting with Linux</a>
+                            </div>
+                    </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button active">Lessons</button>
+                           <div class="list-items">
+                               <a href="linuxcommandsI.html">Linux Commands I</a>
+                               <a href="linuxcommandsII.html">Linux Commands II</a>
+                               <a href="playingwithtext.html" class="active">Playing with Text</a>
+                               <a href="permissions.html">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+                   
+                   <div class="menu-option">
+                       <button class="menu-button">Flashcards</button>
+                           <div class="list-items">
+                               <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                               <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                               <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                               <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                               <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+                           </div>
+                   </div>
+               </div>
+        <div class="leftnav">
+            <h3>CHOOSE A LESSON</h3>
+                <ul>
+                    <li><a href="linuxcommandsI.html">LINUX COMMANDS I</a></li>
+                    <li><a href="linuxcommandsII.html">LINUX COMMANDS II</a></li>
+                    <li><a href="playingwithtext.html">PLAYING WITH TEXT</a></li>
+                    <li><a href="permissions.html">USERS, GROUPS, &amp; PERMISSIONS</a></li>
+                </ul>
+        </div>
+        
+        <div class="LessonsContent">
+            <div class="header">
+                <h1> Playing with Text </h1>
+                <p class="text-commands1">
+                    Text editing is one feature that can also be done completely from the terminal in Linux. 
+                    CentOS and other Linux distributions offer different types of text editors to use within the terminal to write/edit text, search text, save text, and open files. 
+                    All of this can be accomplished with different commands in the Linux terminal.
+                </p>
+            </div>
+            
+            <div class="textBox">
+                <h3>Text Editors:</h3>
+                <p class="text-commands1">
+                    To get started playing with text you first need to choose a text editor to use. 
+                    A text editor is a piece of software that allows for the opening of different files and the ability to edit those files. 
+                    Linux has many different types of text editors available for use but two of the most popular text editors are vim and nano.
+                </p>
+                <p class="text-commands1">
+                    Vim is a text editor that is native to nearly every linux distribution by default. 
+                    Vim is a text editor that is tough to get started with and to master. 
+                    t can be difficult and confusing starting out. However, most expert Linux users often choose Vim due to the advanced manipulation and power it possesses.  
+                </p>
+                <p class="text-commands1">
+                    Nano is a text editor that might need to be installed depending on the Linux distribution you are using. 
+                    In CentOS 7, nano is installed by default. Nano is easy to use and master as well as intuitive for newer Linux users. 
+                    Nano also lists its shortcut commands at the bottom of the screen when open.
+                </p>
+                <p class="text-commands1">
+                    Choosing between these two editors is ultimately up to you. 
+                    But for the purpose of these tutorials we will be using nano as it is easier to explain as well as getting started with.              
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Running Nano:</h3>
+                <img src="assets/images/runningnano.png" alt="Running Nano" class="lesson-img">
+                <p class="text-commands1">
+                    To open the nano text editor and get started working on a file. 
+                    Enter the command “nano” followed by the filename or full path and filename if the file is not in your current directory. 
+                    For example, entering the command “nano file1.txt” will open file1.txt in the nano text editor. 
+                    Note: if the file does not exist, nano will still open anyways and create the file when saved. 
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Editing within Nano:</h3>
+                <img src="assets/images/editingnano.png" alt="Editing Nano" class="lesson-img">
+                <p class="text-commands1">
+                    Once in the nano text editor screen shown above, you can now edit, add, and make changes to the file that is open. 
+                    In this example we have the text file file1.txt open in nano. 
+                    From this point we can easily add words using our keyboard and type and make any changes we want within the file.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Saving a File:</h3>
+                <img src="assets/images/savingnano.png" alt="Saving Nano" class="lesson-img">
+                <p class="text-commands1">
+                    Once you are done editing the file in the nano text editor you probably would like to save your changes to the file so they are not lost. 
+                    To do this, enter the key combination on your keyboard - “control” + “O” then press enter. 
+                    This will save your changes to the file open.
+                </p>
+            </div>
+
+            <div class="textBox">
+                <h3>Exiting Nano:</h3>
+                <p class="text-commands1">
+                    After you have saved your changes to the file in nano and you want to exit - use the key combination “control” + “X” to exit out of the nano text editor. 
+                    You can also see this listed on the bottom of the screen with other shortcuts.
+                </p>
+            </div>
+
+
+        </div>
+
+        <footer>
+            <p class="foot">2019 - Peachagranate</p>
+        </footer>
+
+    </body>
+</html>

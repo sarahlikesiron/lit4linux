@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang=en-us>
+
+<!-- Project 1 Peachagranate -->
+<!-- ISTE240 section 2 Team 3-->
+<!-- 
+	-->
+
+<head>
+    <meta charset="UTF-8">
+    <title> Project 1 </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles1.css">
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/flashcards.js"></script>
+</head>
+
+<body>
+
+    <!-- Section to add the nav bar -->
+    <i class="fa fa-bars" id="hamburger" onclick="displayMenu()"></i>
+    <div class="logo">
+        <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+    </div>
+    <div id='nav'>
+        <div class="menu-option">
+            <button class="menu-button active">Home</button>
+            <div class="list-items">
+                <a href="index.html" class="active">About</a>
+            </div>
+        </div>
+
+        <div class="menu-option">
+            <button class="menu-button">Getting Started</button>
+            <div class="list-items">
+                <a href="gettingStarted.html">Starting with Linux</a>
+            </div>
+        </div>
+
+        <div class="menu-option">
+            <button class="menu-button">Lessons</button>
+            <div class="list-items">
+                <a href="linuxcommandsI.html">Linux Commands I</a>
+                <a href="linuxcommandsII.html">Linux Commands II</a>
+                <a href="playingwithtext.html">Playing with Text</a>
+                <a href="permissions.html">Users, Groups, & Permissions</a>
+            </div>
+        </div>
+
+        <div class="menu-option">
+            <button class="menu-button">Flashcards</button>
+            <div class="list-items">
+                <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+            </div>
+        </div>
+    </div>
+    <div class="pageContent homePageContent">
+        <div class="gridContainer">
+
+            <div class="about homeAbout">
+                <h1> About </h1>
+                <p class="aboutContent">
+                    Lit 4 Linux is a website that intends to educate beginner users on the basics of Linux.
+                    Whether you are someone who knows nothing about Linux but wants to learn,
+                    or someone who knows some Linux and wants to learn more, our site will both engage and teach you.
+                    By using a variety of games surrounding different commands and lessons,
+                    Lit 4 Linux hopes to teach people Linux in an entertaining, yet simple way.
+                </p>
+            </div>
+            <!--about-->
+
+            <div class="login">
+                <form>
+                    <p>
+                        <label for="userName"> User Name </label>
+                        <input id="userName" type="text" name="userName">
+                    </p>
+                    <p>
+                        <label for="pass"> Password </label>
+                        <input id="pass" type="text" name="pass">
+                    </p>
+
+                    <input class="sub" type="submit" value="Let's go! >">
+
+                </form>
+
+            </div>
+            <!--login-->
+        </div>
+        <!--gridContainer-->
+    </div>
+    <!--PageContent-->
+
+    <div class="pageContentBottom">
+        <!--        includes: site goals-->
+
+        <h1>Site Goals</h1>
+
+        <div class="learn">
+            <img class="homeicon" alt="" src="assets/images/icon_learn.png">
+            <h3 class="iconh3">LEARN</h3>
+            <p class="iconp">
+                Lit4Linux covers everything you need to know to get started with Linux.
+                We cover topics from basic to advanced. You will learn to love Linux in no time.
+            </p>
+        </div>
+        <!--Learn-->
+
+        <div class="game">
+            <img class="homeicon" alt="" src="assets/images/icon_gamification.png">
+            <h3 class="iconh3">GAMIFICATION</h3>
+            <p class="iconp">
+                Lit4Linux is built to be interactive with you. Use our fun flashcards when
+                learning new terms.
+            </p>
+        </div>
+        <!--GAME-->
+
+
+        <div class="audience">
+            <img class="homeicon" alt="" src="assets/images/icon_audience.png">
+            <h3 class="iconh3">AUDIENCE</h3>
+            <p class="iconp">
+                Lit4Linux is for those that need a jump start to their Linux career.
+                Learn Linux with content that is easy to understand and will hold your attention!
+            </p>
+        </div>
+        <!--audience-->
+        <br>
+
+    </div>
+    <!--pageContentBottom-->
+
+    <footer>
+        <p class="foot">2019 - Peachagranate</p>
+    </footer>
+
+</body></html>

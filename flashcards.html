@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/styles1.css">
+    <title>Flashcards</title>
+    <!-- for now im just putting the script inside of the html file, we can move it later -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles1.css">
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/flashcards.js"></script>
+    
+    <!-- Additionally temporarily adding style inside the file, because i do not know exactly what the style file should look like rn -->
+</head>
+
+<body>
+    
+    <!-- Section to add the nav bar -->
+    <i class="fa fa-bars" id="hamburger" onclick="displayMenu();"></i>
+    <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="icon"></a>
+        </div>
+    <div id='nav'>
+        <div class="menu-option">
+            <button class="menu-button">Home</button>
+                <div class="list-items">
+                    <a href="index.html">About</a>
+                </div>
+        </div>
+                
+        <div class="menu-option">
+            <button class="menu-button">Getting Started</button>
+                <div class="list-items">
+                    <a href="gettingStarted.html">Starting with Linux</a>
+                </div>
+        </div>
+       
+       <div class="menu-option">
+           <button class="menu-button">Lessons</button>
+               <div class="list-items">
+                   <a href="linuxcommandsI.html">Linux Commands I</a>
+                   <a href="linuxcommandsII.html">Linux Commands II</a>
+                   <a href="playingwithtext.html">Playing with Text</a>
+                   <a href="permissions.html">Users, Groups, &amp; Permissions</a>
+               </div>
+       </div>
+       
+       <div class="menu-option">
+           <button class="menu-button active">Flashcards</button>
+               <div class="list-items">
+                   <a href="flashcards.html" id="about" onclick="differentPack('about'); return false;">About Linux</a>
+                   <a href="flashcards.html" id="commands1" onclick="differentPack('commands1'); return false;">Linux Commands I</a>
+                   <a href="flashcards.html" id="commands2" onclick="differentPack('commands2'); return false;">Linux Commands II</a>
+                   <a href="flashcards.html" id="playingText" onclick="differentPack('playingText'); return false;">Playing with Text</a>
+                   <a href="flashcards.html" id="groups" onclick="differentPack('groups'); return false;">Users, Groups, &amp; Permissions</a>
+               </div>
+       </div>
+   </div>
+        <!-- section to code the left nav that controls what card packs are picked -->
+    <div class="leftnav">
+        <h3>CHOOSE A PACK</h3>
+        <ul>
+            <li><a href="flashcards.html" id="about-2" onclick="differentPack('about'); return false;">ABOUT LINUX</a></li>
+            <li><a href="flashcards.html" id="commands1-2" onclick="differentPack('commands1'); return false;">LINUX COMMANDS I</a></li>
+            <li><a href="flashcards.html" id="commands2-2" onclick="differentPack('commands2'); return false;">LINUX COMMANDS II</a></li>
+            <li><a href="flashcards.html" id="playingText-2" onclick="differentPack('playingText'); return false;">PLAYING WITH TEXT</a></li>
+            <li><a href="flashcards.html" id="groups-2" onclick="differentPack('groups'); return false;">USERS, GROUPS, &amp; PERMISSIONS</a></li>
+        </ul>
+    </div>
+    
+    <!-- Section for the card -->
+    <div class="container">
+    
+        <!-- Section to add the card div itself for styling and such -->
+        <div class="wholeCard">
+            <h2 id="flashcards">FLASHCARDS</h2>
+        
+            <div id="flashcard">
+                <div id="front" style="visibility: visible;">
+                </div>
+            </div>
+        
+            <!-- Add in the arrows and numbers to control the flash cards with -->
+            <div id="flashcontrols">
+                <p><span id="leftarrow">&#x2B05;</span><span id="cardCount"> -/- </span><span id="rightarrow">&#x27A1;</span></p>
+            </div>
+            
+        </div>
+            <!-- Section to add the words showing below -->
+        <div class="underCard">
+            <!-- Use javascript to get the length of each term/definiton array and display the correct number of cards witht he information desired -->
+            <div class="terms">
+            </div>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <p class="foot">2019 - Peachagranate</p>
+    </footer>
+  
+</body>
+</html>

@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: omnes, omnes-pro;
+}
+
+p {
+    color: #1744A7;
+}
+/* nav bar section */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 7em 0 7em;
+    overflow: hidden;
+    background: linear-gradient(to right, #1744A7, #327AD3);
+}
+nav li {
+    float: none;
+    position: relative;
+    top: 20px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 10pt;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav li a:hover {
+    text-decoration: underline #74EEFF;
+}
+.active {
+    color: #74EEFF;
+}
+nav li a img {
+    height: 4em;
+    position: relative;
+    top: -20px;
+}
+
+/* footer */
+footer {
+    background: linear-gradient(to right, #1744A7, #327AD3);
+    padding: 0.05em 0 0.05em 0;
+    text-align: center;
+    color: white;
+    font-size: 10pt;
+}
+
+.foot {
+    color: white;
+}
+
+/*formating for page content */
+h1, h4, h3{
+	color: #1744A7;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding: 0.05em;
+}
+
+.description{
+	color: #1744A7;
+}
+
+.gettingStarted{
+    text-align: center;
+}
+.header{
+	padding: 3em;
+    display: grid;
+}
+.pageContent{
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	clear:both;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.LessonsContent{
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	clear:both;
+	/*margin-left: 200px;*/
+    text-align: center;
+    padding: 1em;
+}
+
+.textBox{
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    padding: 1.5em 2em;
+}
+/*formating for page content */
+
+.pageContent{
+	display: inline-grid;
+	width: auto;
+	grid-template-columns: auto;
+	padding: 1em;
+	clear: both;
+}
+
+.gridContainer{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.aboutContent{
+	padding: 3em;
+}
+
+.about , .login{
+	text-align: center;
+	padding: 3em;
+	color: white;
+}
+
+/*formating for getting started */
+
+.theList{
+	list-style-type: none;
+	color: #1744A7;
+    text-align: center;
+}
+
+.lin{
+	padding: 1em;
+    text-align: center;
+    display: inline-block;
+}
+
+.lesson-img{
+    display: block;
+    max-height: 450px;
+    max-width: 450px;
+    margin: 1em auto;
+    width: 100%;
+}
+
+/* flashcards section */
+/* h2 id for the 'flashcards' text */
+#flashcards {
+    color: #1744A7;
+    text-align: center;
+    font-size: 24pt;
+    margin-top: 1.2em;
+}
+/* id for the actual flashcard design */
+#flashcard {
+    background-color: white;
+    box-shadow: 0 10px  1em darkgray;
+    margin: 3em auto 2em auto;
+    width: 600px;
+    height: 400px;
+}
+/* id for the text on the flashcard (needs to be fixed!!!) */
+#front {
+    text-align: center;
+    line-height: 400px;
+    font-size: 16pt;
+    font-weight: normal;
+}
+/* section to handle the formatting/design for the controls for the flashcards */
+#flashcontrols {
+    text-align: center;
+    margin-bottom: 2em;
+}
+#leftarrow, #rightarrow, #cardCount {
+    color: darkgray;
+    font-size: 24pt;
+}
+#leftarrow, #rightarrow {
+    padding: 0.5em;
+}
+#leftarrow:hover, #rightarrow:hover, #flashcard:hover {
+    cursor: pointer;
+}
+/* formatting for the section under the actual flashcard, including the boxes */
+.underCard {
+    background-color: #E6E6E6;
+    height: 50em;
+}
+/* formatting for the div that will contain all of the term divs */
+.terms {
+    width: 60%;
+    position: relative;
+    top: 5em;
+    margin: 1em auto 2em auto;
+}
+/* the div responsible for the background and formatting for each term/definition pair */
+.eachTerm {
+    box-shadow: 1px 0.5em 0.5em darkgray;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    margin-bottom: 2em;
+    background-color: white;
+}
+/* formatting for the actual terms and definitions (needs fixed!) */
+.term {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+.definition {
+    width: 80%;
+    clear: both;
+    position: relative;
+}
+.term, .definition {
+    font-weight: bold;
+    font-size: 12pt;
+    display: inline-block;
+}
+
+.leftnav {
+    display: none;
+}
+
+.text-commands1 {
+    padding: 1em;
+}
+
+
+/*Desktop Display*/
+
+@media screen and (min-width: 768px) {
+
+    .lesson-img{
+        max-width: 450px;
+        margin: 1em;
+        margin-left: 0;
+        float: left;
+    }
+
+    .content {
+        overflow: auto;
+    }
+
+    /* leftnav */
+    .leftnav {
+        display: block;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        top: auto;
+        left: 0;
+        background: linear-gradient(to right, #1744A7, #327AD3);
+        color: white;
+        overflow-x: hidden;
+        padding: 100px 35px 250px 20px;
+    }
+    
+    .leftnav h3 {
+        font-weight: normal;
+        font-size: 16pt;
+        padding: 0.5em 0.5em 0.5em 0.1em;
+        color: white;
+    }
+    
+    .leftnav ul li {
+        list-style-type: none;
+        margin-top: 2em;
+    }
+    
+    .leftnav ul li a {
+        font-size: 10pt;
+        text-decoration: none;
+        margin-bottom: 3em;
+        font-weight: 300;
+        margin-left: 5px;
+        color: inherit;
+    }
+
+    .LessonsContent{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        clear: both;
+        margin-left: 250px;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .text-commands1{
+        line-height: 2em;
+        font-size: 1.5em;
+        width: 100%;
+        padding: 1em;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 7em 0 7em;
+        overflow: hidden;
+        background: linear-gradient(to right, #1744A7, #327AD3);
+    }
+    nav li {
+        float: right;
+        position: relative;
+        top: 20px;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        font-size: 10pt;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    nav li a:hover {
+        text-decoration: underline #74EEFF;
+    }
+    .active {
+        color: #74EEFF;
+    }
+    nav li a img {
+        height: 4em;
+        position: relative;
+        top: -20px;
+    }
+
+}
